@@ -55,23 +55,23 @@ public:
 	}
 };
 
-class —haracteristic abstract {
+class Characteristic abstract {
 public:
-	virtual void Heroes—haracteristic() = 0;
+	virtual void HeroesCharacteristic() = 0;
 };
 
-class Positive : public —haracteristic {
+class Positive : public Characteristic {
 public:
 	virtual void get_name() = 0;
-	void Heroes—haracteristic() override {
+	void HeroesCharacteristic() override {
 		cout << "I'm positive hero\n";
 	}
 };
 
-class Negative : public —haracteristic {
+class Negative : public Characteristic {
 public:
 	virtual void get_name() = 0;
-	void Heroes—haracteristic() override {
+	void HeroesCharacteristic() override {
 		cout << "I'm negative hero\n";
 	}
 };
@@ -171,7 +171,7 @@ int main()
 
 	for (auto& i : positiv_heroes) {
 		i->get_name();
-		i->Heroes—haracteristic();
+		i->HeroesCharacteristic();
 		cout << "\n\n";
 	}
 
